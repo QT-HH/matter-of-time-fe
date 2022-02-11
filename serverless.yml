@@ -7,3 +7,4 @@ myNextApplication:
     bucketRegion: 'ap-northeast-2'
     cloudfront:
       comment: 'next deploy'
+      distributionId: 'E3B631UW639CJD'

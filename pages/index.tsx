@@ -21,6 +21,9 @@ const Home: NextPage = () => {
         <Link href='/testpage/testpage'>
           <a>테스트 페이지</a>
         </Link>
+        <Link href='/debounce/debounce'>
+          <a>debounce</a>
+        </Link>
       </main>
 
       <footer className={styles.footer}>

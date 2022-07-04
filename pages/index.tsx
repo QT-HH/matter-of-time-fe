@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 
+import Head from 'next/head'
 import Link from 'next/link'
+import { Main } from "./components";
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <Main>
         <h1>
           백규태 실험실
         </h1>
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
         <Link href='/debounce/debounce'>
           <a>debounce</a>
         </Link>
-      </main>
+      </Main>
     </div>
   )
 }

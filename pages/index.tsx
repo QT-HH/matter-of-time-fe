@@ -1,8 +1,32 @@
 import type { NextPage } from 'next'
+import styled from 'styled-components'
 
 import Head from 'next/head'
-import Link from 'next/link'
-import { Main } from "./components";
+import { Main } from "./components"
+
+const StyledLink = styled.a`
+  margin: 0 10px;
+`
+
+interface page {
+  name: string;
+  href: string;
+}
+
+const pages: Array<page> = [
+  {
+    name: '테스트페이지',
+    href: 'testpage'
+  },
+  {
+    name: 'debounce',
+    href: 'debounce'
+  },
+  {
+    name: 'super메서드 실험',
+    href: 'supertest'
+  },
+]
 
 const Home: NextPage = () => {
   return (
@@ -17,12 +41,13 @@ const Home: NextPage = () => {
         <h1>
           백규태 실험실
         </h1>
-        <Link href='/testpage/testpage'>
-          <a>테스트 페이지</a>
-        </Link>
-        <Link href='/debounce/debounce'>
-          <a>debounce</a>
-        </Link>
+        {
+          pages.map((page, idx) => (
+            <StyledLink href={page.href} key={`${page.href}-${idx}`}>
+              {page.name}
+            </StyledLink>
+          ))
+        }
       </Main>
     </div>
   )

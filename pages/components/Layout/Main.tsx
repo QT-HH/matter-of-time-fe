@@ -2,11 +2,12 @@ import styled from 'styled-components'
 import {ReactNode} from 'react'
 
 const MainLayout = styled.div`
-  margin: 20px 30px
+  margin: 20px 30px;
+  padding: 20px 30px;
 `
 
 interface MainProps {
-  children: ReactNode
+  children?: ReactNode
 }
 
 const Main = ({children}: MainProps) => {

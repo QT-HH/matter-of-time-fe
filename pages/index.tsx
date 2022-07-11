@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import styled from 'styled-components'
 
 import Head from 'next/head'
-import { Main } from "./components"
+import { Layout } from "../components"
 
 const StyledLink = styled.a`
   margin: 0 10px;
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Main>
+      <Layout.Main>
         <h1>
           백규태 실험실
         </h1>
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
             </StyledLink>
           ))
         }
-      </Main>
+      </Layout.Main>
     </div>
   )
 }

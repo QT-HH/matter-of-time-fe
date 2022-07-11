@@ -2,7 +2,7 @@ import {NextPage} from 'next';
 import styled from 'styled-components'
 import {useState} from 'react';
 
-import { Main } from '../components'
+import { Layout } from '../../components'
 
 const StyledButton = styled.div`
   display: inline-block;
@@ -61,7 +61,7 @@ const SuperTest: NextPage = () => {
   const BaseInst = new Base();
   const BranchInst = new Branch();
 
-  return <Main>
+  return <Layout.Main>
     <div>오류가 나는 상황</div>
     <StyledResult>{str}</StyledResult>
 
@@ -74,7 +74,7 @@ const SuperTest: NextPage = () => {
     <br />
 
     <StyledButton onClick={() => reset()}>reset</StyledButton>
-  </Main>
+  </Layout.Main>
 }
 
 export default SuperTest
